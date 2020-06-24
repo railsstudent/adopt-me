@@ -1,0 +1,23 @@
+{
+  "name": "adopt-me",
+  "version": "1.0.0",
+  "description": "COMPLETE INTRO TO REACT V5",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"src/**/*.{js,jsx,html}\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/railsstudent/adopt-me.git"
+  },
+  "author": "Connie Leung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/railsstudent/adopt-me/issues"
+  },
+  "homepage": "https://github.com/railsstudent/adopt-me#readme",
+  "devDependencies": {
+    "prettier": "^2.0.5"
+  }
+}
