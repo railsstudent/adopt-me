@@ -20,8 +20,12 @@
   },
   "homepage": "https://github.com/railsstudent/adopt-me#readme",
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "eslint": "^7.3.1",
     "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.0",
     "parcel-bundler": "^1.12.4",
     "prettier": "^2.0.5"
   },
