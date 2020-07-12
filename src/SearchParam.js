@@ -33,7 +33,6 @@ const SearchParams = () => {
     return (
       <div className="search-params">
         <h1>{location}</h1>
-        <h2>{animal}</h2>
         <form onSubmit={(e) =>{ 
           e.preventDefault();
           requestPets();
