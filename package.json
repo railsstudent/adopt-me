@@ -21,6 +21,9 @@
   },
   "homepage": "https://github.com/railsstudent/adopt-me#readme",
   "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
     "babel-eslint": "^10.1.0",
     "cross-env": "^7.0.2",
     "eslint": "^7.3.1",
