@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import pet from "@frontendmasters/pet";
+import Carousel from "./Carousel";
 
 const Details = (props) => {
     const id = +props.id;
@@ -16,7 +17,20 @@ const Details = (props) => {
                         address: { city, state }
                     },
                     breeds: { primary: breed } 
-                } = animal;
+                } = animal || { 
+                    name: '', 
+                    description: '',
+                    photos: [],
+                    type: '',
+                    contact: { 
+                        address: { 
+                            city: '', state: ''
+                        }
+                    },
+                    breeds: {
+                        primary: ''
+                    }
+                };
                 setDetails({
                     name,
                     animal: type,
@@ -32,11 +46,12 @@ const Details = (props) => {
     return (
         loading ? <h1>Loading...</h1> :
             <div className="details">
+                <Carousel media={details.media} />
                 <div>
-                    <h1>{ details.name }</h1>
+                    <h1>{details.name}</h1>
                     <h2>{`${details.animal} - ${details.breed} - ${details.location}`}</h2>
-                    <button>Adopt { details.name }</button>
-                    <p>{ details.description }</p>
+                    <button>Adopt {details.name}</button>
+                    <p>{details.description}</p>
                 </div>
             </div>
     )
