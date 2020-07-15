@@ -10,7 +10,7 @@ const SearchParams = () => {
     const [animal, AnimalDropdown] = useDropdown('Animal', 'dog', ANIMALS);
     const [breed, BreedDropdown, setBreed] = useDropdown('Breed', '', breeds);
     const [pets, setPets] = useState([]);
-    const [{ backgroundColor, color }] = useContext(ThemeContext);
+    const [{ backgroundColor, color }, setTheme] = useContext(ThemeContext);
 
     useEffect(() => {
       setBreeds([]);
@@ -48,6 +48,20 @@ const SearchParams = () => {
             </label>
             <AnimalDropdown />
             <BreedDropdown />
+            <label htmlFor="theme">
+              Theme
+              <select
+                id="theme"
+                onChange={e => setTheme({ backgroundColor: e.target.value, color })}
+                onBlur={e => setTheme({ backgroundColor: e.target.value, color })}
+              >
+                <option value="darkblue">Dark Blue</option>
+                <option value="mediumorchid">Medium Orchid</option>
+                <option value="maroon">Maroon</option>
+                <option value="darkolivegreen">Dark Olive Green</option>
+                <option value="lightskyblue">Light Sky Blue</option>
+              </select>
+            </label>
             <button style={{ backgroundColor, color } }>Submit</button>
         </form>
         <Results pets={pets} />
