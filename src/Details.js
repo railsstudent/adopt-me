@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import pet from "@frontendmasters/pet";
 import Carousel from "./Carousel";
+import ThemeContext from './ThemeContext';
 
 const Details = (props) => {
     const id = +props.id;
     const [details, setDetails] = useState(null);
     const [loading, setLoading] = useState(true)
+    const [{ backgroundColor, color }] = useContext(ThemeContext);
 
     useEffect(() => {
         setDetails(null)
@@ -50,7 +52,7 @@ const Details = (props) => {
                 <div>
                     <h1>{details.name}</h1>
                     <h2>{`${details.animal} - ${details.breed} - ${details.location}`}</h2>
-                    <button>Adopt {details.name}</button>
+                    <button style={{ backgroundColor, color }}>Adopt {details.name}</button>
                     <p>{details.description}</p>
                 </div>
             </div>
