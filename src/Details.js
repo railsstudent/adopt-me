@@ -67,12 +67,10 @@ const Details = (props) => {
                     {
                         showModal ?
                         <Modal>
-                            <div>
-                                <h1>Would you like to adopt {details.name}?</h1>
-                                <div className="buttons">
-                                    <button onClick={adopt}>Yes</button>
-                                    <button onClick={toggleModal}>No</button>
-                                </div>
+                            <h1>Would you like to adopt {details.name}?</h1>
+                            <div className="buttons">
+                                <button onClick={adopt}>Yes</button>
+                                <button onClick={toggleModal}>No</button>
                             </div>
                         </Modal>                        
                         : null
